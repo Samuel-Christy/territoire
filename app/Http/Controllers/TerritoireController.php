@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CodePostal;
-use App\Commune;
-use App\Departement;
-use App\Region;
+
+use App\Models\Territoire\CodePostal;
+use App\Models\Territoire\Commune;
+use App\Models\Territoire\Departement;
+use App\Models\Territoire\Region;
 use Illuminate\Http\Request;
 
 class TerritoireController extends Controller
