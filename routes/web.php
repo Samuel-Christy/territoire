@@ -31,3 +31,9 @@ Route::prefix('commune')->group(function(){
 Route::prefix('code_postal')->group(function(){
     Route::get('/{id?}','TerritoireController@codePostal');
 });
+
+Route::prefix('radars')->group(function(){
+    Route::get('/','RadarController@seed');
+    Route::get('/more/{id?}','RadarController@additionnal_seed');
+    //Route::get('/{id?}','TerritoireController@codePostal');
+});

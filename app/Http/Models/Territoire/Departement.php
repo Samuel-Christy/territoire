@@ -2,6 +2,7 @@
 
 namespace App\Models\Territoire;
 
+use App\Radar;
 use Illuminate\Database\Eloquent\Model;
 
 class Departement extends Model
@@ -18,4 +19,9 @@ class Departement extends Model
     public function communes(){
         return $this->hasMany(Commune::class);
     }
+
+    public function radars(){
+        return $this->belongsToMany(Radar::class);
+    }
+
 }
